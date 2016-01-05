@@ -40,13 +40,6 @@ module.exports = function (grunt) {
           'examples/img/{,*/}*.{png,jpg,jpeg,gif,webp,svg}',
           'src/styles/(,*/}*.css'
         ]
-      },
-      express: {
-        files:  [ '**/*.js' ],
-        tasks:  [ 'express:dev' ],
-        options: {
-          spawn: false
-        }
       }
     },
 
@@ -136,24 +129,14 @@ module.exports = function (grunt) {
       }
     },
 
-    cssmin: {
-      dist: {
-        files: {
-          'dist/css/ap-booking-searchbar.min.css': ['src/styles/ap-booking-searchbar.css']
-        }
-      }
-    },
-
     uglify: {
       dist: {
         files: {
-          'dist/js/ap-booking-searchbar.min.js': [
-            'src/js/ap-booking-searchbar.js',
+          'dist/js/ng-class-on-mobile.min.js': [
+            'src/js/ngClassOnMobile.js',
+            'src/js/services/deviceCheckService.js',
             'src/templates/templates.js',
-            'src/js/directives/searchBar.js',
-            'src/js/services/citiesService.js',
-            'src/js/services/bookingSearchService.js',
-            'src/js/filters/range.js'
+            'src/js/directives/ngClassOnMobile.js',
           ]
         }
       }
@@ -161,7 +144,7 @@ module.exports = function (grunt) {
 
     html2js: {
       options: {
-        module: 'apBookingSearchbar'
+        module: 'ngClassOnMobile'
       },
       main: {
         src: ['src/templates/**/*.html'],
@@ -172,21 +155,10 @@ module.exports = function (grunt) {
     less: {
       development: {
         files: {
-          'src/styles/ap-booking-searchbar.css': 'src/styles/ap-booking-searchbar.less'
+          'src/styles/ng-class-on-mobile.css': 'src/styles/ng-class-on-mobile.less'
         }
       }
     },
-
-    express: {
-      options: {
-        port: 4321
-      },
-      dev: {
-        options: {
-          script: './fakeBackend.js'
-        }
-      }
-    }
 
     // karma: {
     //   unit: {
@@ -207,7 +179,6 @@ module.exports = function (grunt) {
     'less',
     'html2js',
     'autoprefixer',
-    'express:dev',
     'connect:livereload',
     'watch'
   ]);
@@ -216,9 +187,7 @@ module.exports = function (grunt) {
     'less',
     'html2js',
     'autoprefixer',
-    'cssmin',
     'uglify',
-    'express:dev',
     'connect:dist'
   ]);
 
@@ -232,7 +201,6 @@ module.exports = function (grunt) {
     'less',
     'html2js',
     'autoprefixer',
-    'cssmin',
     'uglify'
   ]);
 
