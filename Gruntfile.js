@@ -1,10 +1,7 @@
 module.exports = function (grunt) {
   'use strict';
 
-  // Load grunt tasks automatically
   require('load-grunt-tasks')(grunt);
-
-  // Time how long tasks take. Can help when optimizing build times
   require('time-grunt')(grunt);
 
   grunt.initConfig({
@@ -46,7 +43,6 @@ module.exports = function (grunt) {
     connect: {
       options: {
         port: 9000,
-        // Change this to '*' to access the server from outside.
         hostname: 'localhost',
         livereload: 35729
       },
@@ -69,17 +65,6 @@ module.exports = function (grunt) {
             'bower_components',
             'src',
             'test/'
-          ]
-        }
-      },
-      dist: {
-        options: {
-          open: true,
-          keepalive: true,
-          base: [
-            'examples',
-            'bower_components',
-            'dist'
           ]
         }
       }
@@ -175,20 +160,12 @@ module.exports = function (grunt) {
     // }
   });
 
-  grunt.registerTask('server-dev', [
+  grunt.registerTask('server', [
     'less',
     'html2js',
     'autoprefixer',
     'connect:livereload',
     'watch'
-  ]);
-
-  grunt.registerTask('server', [
-    'less',
-    'html2js',
-    'autoprefixer',
-    'uglify',
-    'connect:dist'
   ]);
 
   // grunt.registerTask('test', [

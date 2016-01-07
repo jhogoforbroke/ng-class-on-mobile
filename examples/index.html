@@ -5,22 +5,30 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Example: ng-class-on-mobile</title>
-    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css">
+    <style>
+      .no-mobile { background-color: lightblue; font-family: verdana; }
+      .only-on-mobile { background-color: lightseagreen; font-family: fantasy; color: #FFF; padding: 5px; }
+    </style>
   </head>
   <body>
 
     <div ng-controller="exampleController">
-      <div class="row">
-
+      <div ng-class-on-mobile
+        class-to-add="only-on-mobile"
+        class-to-remove="no-mobile"
+        remove-css-inline="true"
+        style="color: #000; padding: 15px;"
+        class="no-mobile">
+        Some Thing
       </div>
     </div>
 
-    <script src="jquery/jquery.min.js"></script>
-    <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
     <script src="angular/angular.min.js"></script>
     <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular-animate.js"></script>
 
-    <script src="js/ngClassOnMobile.min.js"></script>
+    <script src="js/ngClassOnMobile.js"></script>
+    <script src="js/services/deviceCheckService.js"></script>
+    <script src="js/directives/ngClassOnMobile.js"></script>
 
     <script>
       var app = angular.module('demoapp', ['ngClassOnMobile']);

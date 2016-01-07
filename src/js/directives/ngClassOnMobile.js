@@ -21,20 +21,22 @@ function ngClassOnMobile(deviceCheckService) {
 
   function link(scope, element, attrs) {
 
-    scope.classesToAdd = scope.classToAdd.split(', ').map(function(x){ return x.trim(); });
-    scope.classesToRemove = scope.classToRemove.split(', ').map(function(x){ return x.trim(); });
+    if (deviceCheckService.isAMobileDevice()) {
 
-    scope.classesToRemove.forEach(function(x){
-      element.removeClass(x);
-    });
+      scope.classesToAdd = scope.classToAdd.split(', ').map(function(x){ return x.trim(); });
+      scope.classesToRemove = scope.classToRemove.split(', ').map(function(x){ return x.trim(); });
 
-    scope.classesToAdd.forEach(function(x){
-      element.addClass(x);
-    });
+      scope.classesToRemove.forEach(function(x){
+        element.removeClass(x);
+      });
 
-    if (scope.removeCssInline) {
-      element.removeProp('style');
-      element.removeAttr('style');
+      scope.classesToAdd.forEach(function(x){
+        element.addClass(x);
+      });
+
+      if (scope.removeCssInline) {
+        element.removeAttr('style');
+      }
     }
 
   }
