@@ -1,4 +1,4 @@
-![header](https://github.com/jhogoforbroke/ng-class-on-mobile/blob/master/examples/ngclass-img-responsive-ilustrator.png)
+![header](https://raw.githubusercontent.com/jhogoforbroke/ng-class-on-mobile/master/examples/ngclass-img-responsive-ilustrator.png)
 
 [AngularJS](http://angularjs.org/) directive to change the class of an element if the device accessing it is a mobile device
 
