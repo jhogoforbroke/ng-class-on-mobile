@@ -119,9 +119,9 @@ module.exports = function (grunt) {
         files: {
           'dist/js/ng-class-on-mobile.min.js': [
             'src/js/ngClassOnMobile.js',
-            'src/js/services/deviceCheckService.js',
             'src/templates/templates.js',
             'src/js/directives/ngClassOnMobile.js',
+            'src/js/services/deviceCheckService.js'
           ]
         }
       }
