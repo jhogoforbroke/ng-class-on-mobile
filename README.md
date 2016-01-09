@@ -1,11 +1,12 @@
 ![header](https://github.com/jhogoforbroke/ng-class-on-mobile/blob/master/examples/ngclass-img-responsive-ilustrator.png)
 
-[AngularJS](http://angularjs.org/) directive for change the class of a element if the device that is accessing is a _mobile device
+[AngularJS](http://angularjs.org/) directive to change the class of an element if the device accessing it is a mobile device
 
 # ngClass On Mobile 
-> a simple way to help you make you page responsive in all devices. **in a angular way!**
+> a simple way to help you make your page responsive in all devices. **in a angular way!**
 
-Sometimes is harder with the **same style** create a uniform, funcional and beatyfull layout for all render sizes and several devices. And even media query wouldn't help, because it is not enough be based on the screen size for to get the best user experience for a specific device.
+
+Sometimes it's harder to create a uniform, functional and beautiful layout with the **same style** for all render sizes and several devices. Even media query wouldn't help, because it's not enough to rely on the screen size or media types to get the best user experience for each specific device.
 
 
 ## How to use it
@@ -32,19 +33,24 @@ set the directive in element that you want
 ### class-to-add
 > param class name
 
-the class that will be **added** if the device that accesses is a mobile
-in the above exemple ```.only-on-mobile``` is added.
+the class that will be **added** if the device accessing it is a mobile
+
+in the example above ```.only-on-mobile``` is added.
+
 
 ### class-to-remove
 > param class name
 
-the class that will be **removed** if the device that accesses is a mobile, to enable changes...
-in the above exemple ```.no-mobile``` is removed.
+
+the class that will be **removed** if the device accessesing it is a mobile
+
+in the example above ```.no-mobile``` is removed.
+
 
 ### remove-css-inline
 > param bool
 
-It indicates whether to be removed the inline css that is in element.
+It indicates if the inline css in the element will be removed.
 
 ## Run-it-yourself
 
