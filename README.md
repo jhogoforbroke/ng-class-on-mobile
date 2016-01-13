@@ -2,6 +2,10 @@
 
 [AngularJS](http://angularjs.org/) directive to change the class of an element if the device accessing it is a mobile device
 
+
+See the [Example Page](http://jhogoforbroke.github.io/ng-class-on-mobile/example.html)
+
+
 # ngClass On Mobile 
 > a simple way to help you make your page responsive in all devices. **in a angular way!**
 
