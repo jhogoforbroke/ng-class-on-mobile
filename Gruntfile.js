@@ -127,6 +127,21 @@ module.exports = function (grunt) {
       }
     },
 
+    concat: {
+      options: {
+        separator: ';',
+      },
+      dist: {
+        src: [
+          'src/js/ngClassOnMobile.js',
+          'src/templates/templates.js',
+          'src/js/directives/ngClassOnMobile.js',
+          'src/js/services/deviceCheckService.js'
+        ],
+        dest: 'dist/js/ng-class-on-mobile.js'
+      }
+    },
+
     html2js: {
       options: {
         module: 'ngClassOnMobile'
@@ -178,6 +193,7 @@ module.exports = function (grunt) {
     'less',
     'html2js',
     'autoprefixer',
+    'concat',
     'uglify'
   ]);
 
