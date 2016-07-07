@@ -1,14 +1,13 @@
 {
   "name": "ng-class-on-mobile",
-  "version": "0.0.1",
-  "homepage": "",
+  "version": "1.0.0",
+  "homepage": "http://jhogoforbroke.github.io/ng-class-on-mobile",
   "authors": [
     "Jonatas Marinho <jmarinho.dev@gmail.com>"
   ],
   "description": "AngularJS easy way to change class of elements if be on a mobile device",
   "main": [
-    "dist/js/ng-clss-on-mobile.min.js",
-    "dist/css/ng-clss-on-mobile.min.css"
+    "dist/js/ng-clss-on-mobile.min.js"
   ],
   "license": "MIT",
   "ignore": [
@@ -19,6 +18,6 @@
     "Gruntfile.js"
   ],
   "dependencies": {
-    "angular": "1.4.7"
+    "angular": "^1.5.7"
   }
 }

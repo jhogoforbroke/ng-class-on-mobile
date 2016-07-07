@@ -13,7 +13,8 @@ function ngClassOnMobile(deviceCheckService) {
     scope: {
       classToAdd: '@',
       classToRemove: '@',
-      removeCssInline: '=',
+      delayToApply: '=',
+      removeCssInline: '='
     }
   };
 
@@ -23,20 +24,25 @@ function ngClassOnMobile(deviceCheckService) {
 
     if (deviceCheckService.isAMobileDevice()) {
 
-      scope.classesToAdd = scope.classToAdd.split(', ').map(function(x){ return x.trim(); });
-      scope.classesToRemove = scope.classToRemove.split(', ').map(function(x){ return x.trim(); });
+      setTimeout(function(){
 
-      scope.classesToRemove.forEach(function(x){
-        element.removeClass(x);
-      });
+        scope.classesToAdd = scope.classToAdd.split(', ').map(function(x){ return x.trim(); });
+        scope.classesToRemove = scope.classToRemove.split(', ').map(function(x){ return x.trim(); });
 
-      scope.classesToAdd.forEach(function(x){
-        element.addClass(x);
-      });
+        scope.classesToRemove.forEach(function(x){
+          element.removeClass(x);
+        });
 
-      if (scope.removeCssInline) {
-        element.removeAttr('style');
-      }
+        scope.classesToAdd.forEach(function(x){
+          element.addClass(x);
+        });
+
+        if (scope.removeCssInline) {
+          element.removeAttr('style');
+        }
+
+      }, scope.delayToApply || 0);
+
     }
 
   }
