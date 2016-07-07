@@ -1,13 +1,13 @@
 {
   "name": "ng-class-on-mobile",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "homepage": "http://jhogoforbroke.github.io/ng-class-on-mobile",
   "authors": [
     "Jonatas Marinho <jmarinho.dev@gmail.com>"
   ],
   "description": "AngularJS easy way to change class of elements if be on a mobile device",
   "main": [
-    "dist/js/ng-clss-on-mobile.js"
+    "dist/js/ng-class-on-mobile.js"
   ],
   "license": "MIT",
   "ignore": [
