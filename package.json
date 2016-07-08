@@ -2,11 +2,11 @@
   "name": "ng-class-on-mobile",
   "main": "dist/js/ng-class-on-mobile.js",
   "author": "Jonatas Marinho <jmarinho.dev@gmail.com>",
-  "homepage": "",
+  "homepage": "http://jhogoforbroke.github.io/ng-class-on-mobile",
   "repository": {
-    "url": ""
+    "url": "https://github.com/jhogoforbroke/ng-class-on-mobile.git"
   },
-  "version": "1.0.2",
+  "version": "1.0.3",
   "devDependencies": {
     "connect-modrewrite": "~0.7.9",
     "express": "^4.13.3",

@@ -37,18 +37,22 @@ function ngClassOnMobile(deviceCheckService) {
 
       setTimeout(function(){
 
-        scope.classesToAdd = scope.classToAdd.split(', ').map(function(x){ return x.trim(); });
-        scope.classesToRemove = scope.classToRemove.split(', ').map(function(x){ return x.trim(); });
+        if (!!scope.classToAdd) {
+          scope.classesToAdd = scope.classToAdd.split(', ').map(function(x){ return x.trim(); });
+          scope.classesToAdd.forEach(function(x){
+            element.addClass(x);
+          });
+        }
 
-        scope.classesToRemove.forEach(function(x){
-          element.removeClass(x);
-        });
+        if (!!scope.classToRemove) {
+          scope.classesToRemove = scope.classToRemove.split(', ').map(function(x){ return x.trim(); });
 
-        scope.classesToAdd.forEach(function(x){
-          element.addClass(x);
-        });
+          scope.classesToRemove.forEach(function(x){
+            element.removeClass(x);
+          });
+        }
 
-        if (scope.removeCssInline) {
+        if (!!scope.removeCssInline) {
           element.removeAttr('style');
         }
 
@@ -59,7 +63,6 @@ function ngClassOnMobile(deviceCheckService) {
   }
 
 };
-
 ;'use strict';
 
 angular
